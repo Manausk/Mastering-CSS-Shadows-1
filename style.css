@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #2ec194;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+}
+
+.container .shadowBox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+  background: #fff;
+  margin: 40px 40px;
+  font-family: "Consolas";
+  font-size: 2.5em;
+  box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.container #Box1 {
+  box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.3);
+  /* x y blur rgba */
+}
+
+.container #Box2::before {
+  content: "";
+  position: absolute;
+  left: 10%;
+  bottom: 10px;
+  width: 90%;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.3);
+  transform-origin: left;
+  transform: skewY(5deg);
+  z-index: -1;
+  filter: blur(5px);
+}
+
+.container #Box3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 50%;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.3);
+  transform-origin: right;
+  transform: skewY(-8deg);
+  z-index: -1;
+  filter: blur(10px);
+}
+
+.container #Box3::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  width: 50%;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.3);
+  transform-origin: left;
+  transform: skewY(8deg);
+  z-index: -1;
+  filter: blur(10px);
+}
+
+.container #Box4::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.3);
+  bottom: -50px;
+  border-radius: 50%;
+  filter: blur(10px);
+}
+
+.container #Box5::before {
+  content: "";
+  position: absolute;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background: rgba(0, 0, 0, 0.3);
+  bottom: -15%;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+.container #Box6 {
+  background: #2ec194;
+  border-radius: 15px;
+  box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+    15px 15px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container #Box7 {
+  background: #2ec194;
+  border-radius: 15px;
+  box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+    15px 15px 15px rgba(0, 0, 0, 0.1),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
